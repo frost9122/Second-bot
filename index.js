@@ -20,7 +20,7 @@ bot.on('ready', () => {
     console.log('Bot Ready !');
 });
 
-bot.login("token")
+bot.login(token)
 
 bot.on('messageDelete', async (message) => {
     const entry = message.guild.fetchAuditLogs({type: 'MESSAGE_DELETE'}).then(audit => audit.entries.first())
