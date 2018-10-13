@@ -34,7 +34,7 @@ bot.on('messageDelete', async (message) => {
     
     var tag = message.author.tag
     let user = tag  
-    logs.send(`Un message à été supprimé dans le salon ${message.channel.name} par mes soins car HRP ou par le message était : " ${message} ". Écris par ${user}"`);
+    logs.send(`Un message à été supprimé dans le salon ${message.channel.name} par mes soins car HRP ou par l'utilisateur l'ayant écris (Ou un staff). Le message était : " ${message} ". Écris par ${user}"`);
     
     
 })
