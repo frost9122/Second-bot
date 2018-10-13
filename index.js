@@ -29,12 +29,11 @@ bot.on('messageDelete', async (message) => {
       message.guild.createChannel('logs', 'text');
     }
     if (!message.guild.me.hasPermission('MANAGE_CHANNELS') && !logs) { 
-      console.log(`Y'as pes de channel logs, mais je peux pas le créer, HELP`)
+      console.log(`Y'as pas de channel logs, mais je peux pas le créer, HELP`)
     }
     
-    var tag = message.author.tag
-    let user = tag  
-    logs.send(`Un message à été supprimé dans le salon ${message.channel.name} par mes soins (Dans le cadre d'un message HRP entre parenthèses "(le message)"), ou par ${user} (Ignorer le pseudo si message entre parenthèses) le message était : " ${message} "`);
+
+    logs.send(`Un message à été supprimé dans le salon ${message.channel.name} par mes soins car HRP ou par le message était : " ${message} ". Écris par ${user}"`);
     
     
 })
