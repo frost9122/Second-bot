@@ -32,7 +32,8 @@ bot.on('messageDelete', async (message) => {
       console.log(`Y'as pas de channel logs, mais je peux pas le créer, HELP`)
     }
     
-
+    var tag = message.author.tag
+    let user = tag  
     logs.send(`Un message à été supprimé dans le salon ${message.channel.name} par mes soins car HRP ou par le message était : " ${message} ". Écris par ${user}"`);
     
     
