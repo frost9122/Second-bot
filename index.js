@@ -159,7 +159,7 @@ bot.on('guildMemberAdd', async member => {
             .addField("Concernant le bot", "Il est en constant développement, pensez a tcheck les news dans le channel prévu à cet effet.")
         console.log("Présentation du serveur demandée")
         message.channel.send({embed: présentation})
-        break;<
+        break;
         
         case "fiche":
         var fiche = new Discord.RichEmbed()
