@@ -42,6 +42,7 @@ bot.on('guildMemberAdd', async member => {
     const channel = member.guild.channels.find('name', 'bienvenue');
     if (!channel) return;
     channel.send(`Bienvenue sur le serveur ${member.guild} ${member} Penses à lire les règles et faire ta fiche ! Tu peux aussi utiliser le -help pour savoir les commandes ! ou le +help pour savoir les commandes du bot musique ! (Pense à avoir tes MP's ouverts ^^")`);
+    member.addRole("name", "sans fiche")
     }
     );
   
