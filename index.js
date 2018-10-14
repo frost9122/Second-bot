@@ -26,7 +26,7 @@ bot.on('messageDelete', async (message) => {
     const entry = message.guild.fetchAuditLogs({type: 'MESSAGE_DELETE'}).then(audit => audit.entries.first())
     const logs = message.guild.channels.find('name', 'logs');
     if (message.guild.me.hasPermission('MANAGE_CHANNELS') && !logs) {
-      message.guild.createChannel('logs', 'text'); qsdfgqksdgqzaetoiazeomt
+      message.guild.createChannel('logs', 'text'); 
     }
     if (!message.guild.me.hasPermission('MANAGE_CHANNELS') && !logs) { 
       console.log(`Y'as pas de channel logs, mais je peux pas le créer, HELP`)
@@ -133,7 +133,7 @@ bot.on('guildMemberAdd', async member => {
             .push({ id: number + 1, story_value: value, story_author: author})
             .write();
         
-        break;
+        break;<<<
 
         case "tellstory":
         
