@@ -66,6 +66,7 @@ bot.on('guildMemberAdd', async member => {
     }
         
     if (message.content === prefix + "help"){
+        message.delet(1)
         var help_embed = new Discord.RichEmbed()
             .setColor('#5A01F4')
             .setThumbnail("https://cdn.discordapp.com/attachments/428932127258705940/435937828036149249/800eadaee2225360f59441cfed424f43b1a1f3aa_hq.jpg")
@@ -74,12 +75,12 @@ bot.on('guildMemberAdd', async member => {
             .addField("Interactions", "-ping : Commande pour le lolz, le bot répond pong")
             .addField("Commandes staffs. (Toujours mentionner la personne que vous souhaitez sanctionner.)", "-Ban\n-Kick")
             .setFooter("D'autres commandes sont à venir, soit patient jeune Padawan")
-        message.delet(1)
         message.author.sendEmbed(help_embed);
         console.log("Commande help demandée !")
     }
     
     if(message.content === prefix + "xpstat"){
+        message.delet(1)
         var xp = db.get("xp").filter({user: msgauthor}).find('xp').value()
         var xpfinal = Object.values(xp);
         var xp_embed = new Discord.RichEmbed()
@@ -87,7 +88,6 @@ bot.on('guildMemberAdd', async member => {
             .setTitle(`Xp de ${message.author.username}`)
             .setDescription("Voilà toute l'xp accumulée !")
             .addField("XP :", `${xpfinal[1]} xp`)
-        message.delet(1)
         message.author.sendEmbed(xp_embed);
     
     
