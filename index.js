@@ -1,7 +1,7 @@
 const Discord = require('discord.js');
 const low = require('lowdb')
 const FileSync = require('lowdb/adapters/FileSync')
-//var token = process.env.TOKEN
+var token = process.env.TOKEN
 const adapter = new FileSync('database.json');
 const storeadapter = new FileSync('store.json');
 const db = low(adapter);
@@ -20,7 +20,7 @@ bot.on('ready', () => {
     console.log('Bot Ready !');
 });
 
-bot.login("NTAwMTA4NzEwNzE1MDY0MzQw.DqGFCA.HMSI0TThfbP_FZ0hLgDUVILOpEc")
+bot.login(token)
 
 bot.on('messageDelete', async (message) => {
     const entry = message.guild.fetchAuditLogs({type: 'MESSAGE_DELETE'}).then(audit => audit.entries.first())
