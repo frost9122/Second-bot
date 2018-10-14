@@ -74,6 +74,7 @@ bot.on('guildMemberAdd', async member => {
             .addField("Interactions", "-ping : Commande pour le lolz, le bot répond pong")
             .addField("Commandes staffs. (Toujours mentionner la personne que vous souhaitez sanctionner.)", "-Ban\n-Kick")
             .setFooter("D'autres commandes sont à venir, soit patient jeune Padawan")
+        message.delet(1)
         message.author.sendEmbed(help_embed);
         console.log("Commande help demandée !")
     }
@@ -86,6 +87,7 @@ bot.on('guildMemberAdd', async member => {
             .setTitle(`Xp de ${message.author.username}`)
             .setDescription("Voilà toute l'xp accumulée !")
             .addField("XP :", `${xpfinal[1]} xp`)
+        message.delet(1)
         message.author.sendEmbed(xp_embed);
     
     
